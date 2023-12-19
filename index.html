@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="Sliki/logo_ico.png">
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
+    <title>ITBUS</title>
+</head>
+<body>
+    <div class="header">
+        <img src="Sliki/logo.png" alt="Logo">
+        <div>          
+            <a href="pomos.html"><button class="btns">Помош</button></a>
+            <a href="kontakt.html"><button class="btns">Контакт</button></a>
+            <a href="zanas.html"><button class="btns">За нас</button></a>
+        </div>
+    </div>
+    <div class="main"></div>
+
+    <div class="main-info">
+        <div class="destinacii">
+            <h1>Дестинации</h1>
+
+            <ul class="ul" style="overflow-y: scroll; height: 80%; margin-top: 20px;">
+                <li><button onclick="DestinacijaClick(this)" id="struga">Охрид<->Струга</button></li>
+                <li><button onclick="DestinacijaClick(this)" id="kicevo">Охрид<->Кичево</button></li>
+                <li><button onclick="DestinacijaClick(this)" id="debar">Охрид<->Дебар</button></li>
+                <li><button onclick="DestinacijaClick(this)" id="berovo">Охрид<->Берово</button></li>
+
+                <li><button onclick="DestinacijaClick(this)" id="vinica">Охрид<->Виница</button></li>
+                <li><button onclick="DestinacijaClick(this)" id="delcevo">Охрид<->Делчево</button></li>
+                <li><button onclick="DestinacijaClick(this)" id="stip">Охрид<->Штип</button></li>
+                <li><button onclick="DestinacijaClick(this)" id="probistip">Охрид<->Пробиштип</button></li>
+
+                <li><button onclick="DestinacijaClick(this)" id="skopje">Охрид<->Скопје</button></li>
+                <li><button onclick="DestinacijaClick(this)" id="tetovo">Охрид<->Тетово</button></li>
+                <li><button onclick="DestinacijaClick(this)" id="resen">Охрид<->Ресен</button></li>
+                <li><button onclick="DestinacijaClick(this)" id="bitola">Охрид<->Битола</button></li>
+            </ul>
+        </div>
+        <div id="karti">
+            <h1>Карти</h1>
+
+            <div class="karti-info">
+                <div id="karti-info-struga" class="100" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Струга Поаѓање: 06:00 Пристигнување: 06:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Струга->Охрид Поаѓање: 06:30 Пристигнување: 07:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Струга Поаѓање: 07:00 Пристигнување: 07:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Струга->Охрид Поаѓање: 07:30 Пристигнување: 08:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Струга Поаѓање: 08:00 Пристигнување: 08:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Струга->Охрид Поаѓање: 08:30 Пристигнување: 09:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Струга Поаѓање: 09:00 Пристигнување: 09:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Струга->Охрид Поаѓање: 09:30 Пристигнување: 10:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Струга Поаѓање: 10:00 Пристигнување: 10:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Струга->Охрид Поаѓање: 10:30 Пристигнување: 11:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Струга Поаѓање: 11:00 Пристигнување: 11:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Струга->Охрид Поаѓање: 11:30 Пристигнување: 12:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Струга Поаѓање: 12:00 Пристигнување: 12:30</button>
+                </div>
+                <div id="karti-info-kicevo" class="300" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Кичево Поаѓање: 06:00 Пристигнување: 08:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Кичево->Охрид Поаѓање: 10:00 Пристигнување: 12:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Кичево Поаѓање: 14:00 Пристигнување: 16:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Кичево->Охрид Поаѓање: 16:00 Пристигнување: 18:00</button>
+                </div>
+                <div id="karti-info-debar" class="350" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Дебар Поаѓање: 06:00 Пристигнување: 08:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Дебар->Охрид Поаѓање: 10:30 Пристигнување: 12:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Дебар Поаѓање: 14:30 Пристигнување: 16:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Дебар->Охрид Поаѓање: 16:30 Пристигнување: 18:30</button>
+                </div>
+                <div id="karti-info-berovo" class="1000" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Берово Поаѓање: 06:00 Пристигнување: 11:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Берово->Охрид Поаѓање: 13:00 Пристигнување: 18:00</button>
+                </div>
+                <div id="karti-info-vinica" class="900" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Виница Поаѓање: 06:00 Пристигнување: 09:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Виница->Охрид Поаѓање: 11:30 Пристигнување: 15:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Виница Поаѓање: 17:00 Пристигнување: 20:30</button>
+                </div>
+                <div id="karti-info-delcevo" class="1200" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Делчево Поаѓање: 06:00 Пристигнување: 10:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Делчево->Охрид Поаѓање: 12:30 Пристигнување: 17:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Делчево Поаѓање: 17:30 Пристигнување: 22:00</button>
+                </div>
+                <div id="karti-info-stip" class="500" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Штип Поаѓање: 06:00 Пристигнување: 09:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Штип->Охрид Поаѓање: 16:30 Пристигнување: 20:00</button>
+                </div>
+                <div id="karti-info-probistip" class="450" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Пробиштип Поаѓање: 06:00 Пристигнување: 09:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Пробиштип->Охрид Поаѓање: 10:30 Пристигнување: 14:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Пробиштип Поаѓање: 15:00 Пристигнување: 18:30</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Пробиштип->Охрид Поаѓање: 19:00 Пристигнување: 22:30</button>
+                </div>
+                <div id="karti-info-skopje" class="1100" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Скопје Поаѓање: 06:00 Пристигнување: 09:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Скопје->Охрид Поаѓање: 10:00 Пристигнување: 13:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Скопје Поаѓање: 14:00 Пристигнување: 17:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Скопје->Охрид Поаѓање: 18:00 Пристигнување: 21:00</button>
+                </div>
+                <div id="karti-info-tetovo" class="800" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Тетово Поаѓање: 06:00 Пристигнување: 08:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Тетово->Охрид Поаѓање: 10:00 Пристигнување: 12:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Тетово Поаѓање: 14:00 Пристигнување: 16:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Тетово->Охрид Поаѓање: 18:00 Пристигнување: 20:00</button>
+                </div>
+                <div id="karti-info-resen" class="100" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Ресен Поаѓање: 06:00 Пристигнување: 07:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Ресен->Охрид Поаѓање: 09:00 Пристигнување: 10:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Ресен Поаѓање: 12:00 Пристигнување: 13:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Ресен->Охрид Поаѓање: 15:00 Пристигнување: 16:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Ресен Поаѓање: 18:00 Пристигнување: 19:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Ресен->Охрид Поаѓање: 21:00 Пристигнување: 22:00</button>
+                </div>
+                <div id="karti-info-bitola" class="300" style="visibility: hidden; position: absolute; overflow-y: scroll; height: 350px; margin-top: 40px;">
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Битола Поаѓање: 06:00 Пристигнување: 08:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Битола->Охрид Поаѓање: 10:00 Пристигнување: 12:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Охрид->Битола Поаѓање: 14:00 Пристигнување: 16:00</button>
+                    <button onclick="KartaInfoClick(this)" id="kios" class="karta-info">Битола->Охрид Поаѓање: 18:00 Пристигнување: 20:00</button>
+                </div>
+            </div>
+
+            <div class="karta-cena">
+                <button onclick="VratiSeNaKartiClick()" style="position: absolute; top: 0; right: 20px;"><--</button>
+                <h1 style="position: absolute; top: 20%; text-align: left; margin-left: 15px; font-weight: 100;" id="poaganje">Поаѓање: </h1>
+                <h1 style="position: absolute; top: 30%; text-align: left; margin-left: 15px; font-weight: 100;" id="pristignuvanje">Пристигнување: </h1>
+                <h1 style="position: absolute; top: 40%; text-align: left; margin-left: 15px; font-weight: 100;" id="cena">Цена: </h1>
+                <button onclick="KupiSegaClick()" id="kcbtn" style="position: absolute; left: 60%; top: 80%; padding: 5px;"><b>Купи сега</b></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="buy">
+        <h1>Име: <input type="text" id="textBoxIme"></h1>
+        <h1>Презиме: <input type="text" id="textBoxPrezime"></h1>
+        <h1>Број на картичка: <input type="number" id="textBoxKartickaBroj"></h1>
+        <h1>Трајност на картичката: <input type="month" id="textBoxDatum"></h1>
+        <h1>CVV: <input type="number" id="textBoxCVV"></h1>
+        <button onclick="BuyExitClick()" id="buy-exit">X</button>
+        <button onclick="BuyPlatiClick()" id="buy-plati">Плати</button>
+    </div>
+
+    <div id="bilet" style="background-color: white; width: 100%; height: 100%; position: fixed; top: 0; z-index: -2;">
+        <button onclick="BiletExitClick()" id="exit"><-</button>
+
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 3px solid black; width: 70%; height: 50%;">
+            <img style="width: 20%; position: absolute;" src="Sliki/logo.png" alt="logo">
+            <h1 style="text-align: center; margin: 10px;" id="biletIme">Билет</h1>
+
+            <div style="margin: 20px; margin-top: 140px;">
+                <h1 id="ime">Име: </h1>
+                <h1 id="prezime" style="margin-top: 30px;">Презиме: </h1>
+                <h1 id="sifra" style="margin-top: 30px;">Шифра на билет: </h1>
+                <h1 id="info" style="margin-top: 30px;">Информации за билет: </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="sve">
+        <div class="aktivni-avtobusi">
+            <h1>Активни автобуси:</h1>
+            <h1>250</h1>
+        </div>
+        <div class="ponudipopusti">
+            <h1>Тековни понуди и попусти</h1>
+            <h1>Во моментот немаме тековни понуди и попусти</h1>
+        </div>
+        <div class="vozaci">
+            <h1>Активни возачи:</h1>
+            <h1>190</h1>
+        </div>
+        <div class="itbus"><h1>ITBUS</h1>
+            <h2>Македонска online страница за</h2>
+            <h2>продавање автобуски билети</h2>
+        </div>
+        <div class="sledete">
+            <h1>Следете не:</h1>
+            <h1>инст фејзбук гугл</h1>
+        </div>
+        <div class="zanass">
+            <h1>Изработиле:</h1>
+            <h1>Кристијан Толески III-4</h1>
+            <h1>Лука Ристески III-4</h1>
+            <h1>Наум Речкоски III-4</h1>
+        </div>
+    </div>
+</body>
+</html>
